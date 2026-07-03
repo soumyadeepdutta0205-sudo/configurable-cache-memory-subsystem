@@ -1,0 +1,13 @@
+read_verilog cache_controller.v
+read_verilog data_array.v
+read_verilog tag_array.v
+read_verilog lru_logic.v
+read_verilog main_memory.v
+read_verilog performance_counters.v
+read_verilog cache_top.v
+
+hierarchy -check -top cache_top
+
+synth -top cache_top
+
+write_verilog gate_level_netlist.v
